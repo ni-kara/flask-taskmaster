@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<title> Task Master </title>
+{% endblock %}
+
+{% block body %} 
+<div class="content">
+    <h1 style="text-align: center;"> Update Task </h1>
+
+    <form action="/update/{{task.id}}" method="POST">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm"> Write your task</span>
+            </div>
+            <input type="text"  name="content" value="{{task.content}}" id="content" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <input class="btn btn-success" type="submit" value="Update">
+          
+        </div>
+    </form>
+</div>
+
+{% endblock %}
